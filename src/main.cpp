@@ -1,13 +1,12 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_timer.h>
-#include <iostream>
+#include <stdio.h>
 
 int main(int argc, char *argv[]) {
     // returns zero on success else non-zero
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
-        std::cout << "Error initializing SDL.";
-        // printf("error initializing SDL: %s\n", SDL_GetError());
+        printf("error initializing SDL: %s\n", SDL_GetError());
     }
     SDL_Window* win = SDL_CreateWindow("GAME", // creates a window
                                        SDL_WINDOWPOS_CENTERED,
